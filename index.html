@@ -1,0 +1,291 @@
+<html>
+<head>
+  <title>rnft-ganz bio</title>
+  <link rel="icon" href="https://i.ibb.co.com/FYMZ973/125000.jpg" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      animation: fadeIn 1s ease-in-out;
+      background: url('https://i.ibb.co.com/Zx0mLqd/124998.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .bg-light {
+    background-image:
+    url('https://i.ibb.co.com/Z8dW8qP/125002.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    .bg-dark {
+    background-image:
+    url('https://i.ibb.co.com/F5t6HdR/124999.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .btn {
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+      background-color: #1a202c;
+      color: #fbbf24;
+    }
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .btn i {
+      transition: transform 0.3s;
+    }
+    .btn:hover i {
+      transform: rotate(360deg);
+    }
+    .profile-img {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .profile-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(10px);
+      width: 350px;
+      padding: 20px;
+      animation: slideIn 1s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 3rem;
+      left: 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 20;
+      animation: fadeIn 0.3s ease-in-out;
+      backdrop-filter: blur(10px);
+    }
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      transition: background-color 0.3s;
+    }
+    .dropdown a:hover {
+      background-color: #f6d365;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    #text-display {
+      animation: slideIn 0.3s ease-in-out, slideOut 0.3s ease-in-out 1.7s;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideOut {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+     .floating-button-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .floating-button {
+            background-color: transparent;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+
+        .floating-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .button-text {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+  </style>
+</head>
+<body class="text-black">
+  <audio id="click-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
+<button class="btn bg-blue-600 text-white py-2 px-4 rounded-lg fixed top-4 right-4 flex items-center z-10" onclick="window.location.href='https://www.blogger.com'; playClickSound()">
+  <i class="fas fa-plus"></i>
+</button>
+<button class="btn bg-green-600 text-white py-2 px-4 rounded-lg fixed top-4 right-20 flex items-center z-10" onclick="window.location.href='index.html'; playClickSound()">
+  <i class="fas fa-home"></i>
+</button>
+  <button class="btn bg-gray-600 text-white py-2 px-4 rounded-lg fixed top-4 left-4 flex items-center z-10" onclick="playClickSound(); toggleDropdown()">
+    <i class="fas fa-cog"></i>
+  </button>
+  <div id="dropdown" class="dropdown">
+    <a href="#" onclick="playClickSound(); toggleTheme()">Tampilan Tema Gelap/Terang</a>
+    <a href="https://www.blogger.com" onclick="playClickSound(); showText('Kreatif Blog')">Kreatif Blog</a>
+    <a href="#" onclick="playClickSound(); showText('Beli Kopi')">Beli Kopi</a>
+    <a href="https://wa.me/6285710657639" onclick="playClickSound(); showText('Hubungi Kami')">Hubungi Kami</a>
+    <a href="#" onclick="playClickSound(); showText('Tentang Kami')">Tentang Kami</a>
+    <a href="index.html" onclick="playClickSound(); toggleDropdown()">Kembali</a>
+  </div>
+  <div class="card">
+    <div class="flex justify-center mb-4">
+      <img alt="Profile picture of a person with a futuristic design" class="profile-img rounded-full w-24 h-24" height="100" src="https://i.ibb.co.com/FYMZ973/125000.jpg" width="100"/>
+    </div>
+    <div class="text-center">
+      <p class="text-lg font-semibold">
+        Username:
+        <a class="text-blue-600 hover:underline" href="https://i.ibb.co.com/FYMZ973/125000.jpg">
+          rnft-noxzyyans
+        </a>
+      </p>
+      <p class="text-sm text-gray-600">
+        tentang masa lalunya 
+      </p>
+      <br>
+    </div>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://wa.me/6285710657639" onclick="playClickSound()">
+        <i class="fab fa-whatsapp mr-2"></i>
+        WhatsApp
+      </a>
+    <div class="mt-4 space-y-2">
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://t.me/rnft25" onclick="playClickSound()">
+        <i class="fab fa-telegram mr-2"></i>
+        Telegram
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://www.tiktok.com/@xo_rnftox" onclick="playClickSound()">
+        <i class="fab fa-tiktok mr-2"></i>
+        TikTok
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex items-center justify-center" href="https://www.instagram.com/oxrnft_09" onclick="playClickSound()">
+        <i class="fab fa-instagram mr-2"></i>
+        Istagram
+      </a>
+      <a class="btn block bg-black text-white text-center py-2 rounded-lg flex
+      items-center justify-center"
+      href="https://github.com/rnft58"
+      onclick="playClickSound()">
+        <i class="fab fa-github" style="font-size: 24px; color: black;"></i>
+        Github
+      </a>
+    </div>
+    <div class="text-center mt-4 text-sm text-gray-600">
+      © 2024
+      <a class="text-blue-600 hover:underline" href="https://github.com/TarnaWijaya/Links-Short-XTarz">
+        Link Short ByTarz
+      </a>
+      . Semua hak cipta dilindungi.
+    </div>
+  </div> <div class="floating-button-container">
+        <a href="https://tarnawijaya-studio.github.io/Tarz-AI/" class="floating-button" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.ibb.co.com/Z8c6crL/pp.webp" alt="Tombol Gambar">
+        </a>
+        <div class="button-text">Tarz AI<br>Asisten</div>
+
+  <div id="text-display" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black py-2 px-4 rounded-lg shadow-lg hidden"></div>
+  <script>
+    function playClickSound() {
+      document.getElementById('click-sound').play();
+    }
+
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showText(text) {
+      const textDisplay = document.getElementById('text-display');
+      textDisplay.innerText = text;
+      textDisplay.classList.remove('hidden');
+      setTimeout(() => {
+        textDisplay.classList.add('hidden');
+      }, 2000);
+    }
+    function toggleTheme() {
+    const body = document.body;
+    if (body.classList.contains('bg-light')) {
+        body.classList.remove('bg-light');
+        body.classList.add('bg-dark');
+    } else {
+        body.classList.remove('bg-dark');
+        body.classList.add('bg-light');
+    }
+}
+  </script>
+</body>
+</html>
